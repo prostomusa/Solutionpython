@@ -9,6 +9,9 @@ def compare_two_string(x, y):
     if tern[0] != "":
         if tern[0] != x[:len(tern[0]):]:
             return("KO")
+    if tern[-1] != "":
+        if tern[-1] != x[-len(tern[0])::]:
+            return("KO")
     for i in tern:
         if i == "":
             continue
