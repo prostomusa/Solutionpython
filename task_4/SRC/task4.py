@@ -1,8 +1,14 @@
 def compare_two_string(x, y):
     if "*" in x:
         return("Неверный формат данных")
+
+    if "*" not in y and len(x) != len(y):
+        return ("KO")
     tern = y.split("*")
     p = 0
+    if tern[0] != "":
+        if tern[0] != x[:len(tern[0]):]:
+            return("KO")
     for i in tern:
         if i == "":
             continue
